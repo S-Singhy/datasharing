@@ -1,6 +1,6 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
 
-# FIT9059 Week 4: Practical Session 
+# FIT5211 Week 4: Practical Session 
 
 This practical session is concerned with Complexity and Sorting by Divide-and-Conquer.
 
@@ -18,7 +18,7 @@ _Enjoy!_
     Last week we discussed the celebrity problem. In the practical session  you derived its runtime complexity informally. We used the number of questions asked as a proxy for runtime.  If you need a refresher, please have another look at last week's prac sheet. This week you are asked to derive the same result formally by writing down the runtime recurrence relation for the runtime $T(n)$ and by solving this equation using backward substitution (also called telescoping). As before we will measure runtime simply as the number of questions asked.
 <br>
 
-1. **Complexity of Towers of Hanoi**
+2. **Complexity of Towers of Hanoi**
 
     We have discussed the _Towers of Hanoi_ puzzle during the lecture. Recall its recursive solution. The (somewhat simpler) solution we used in the lecture is
     
@@ -54,24 +54,24 @@ _Enjoy!_
     **Discuss your solution with your tutor.**
 <br>
 
-1. **Space requirements of list functions**
+3. **Space requirements of list functions**
 
     The list functions that you have implemented before perform a significant amount of copying, for example, when _rest_ is used. Determine how much additional space the algorithms require to store intermediate parameters on the recursive call stack. Before doing so, you may want to revise the recurrence relations and the notes about array parameter passing in Python (which works essentially in the same way as these functions). Start by analysing how much space the functions _length_ and _find_ require. 
 
     **Discuss your reasoning with your tutor.**
 <br>
 
-1. **Functional Mergesort**
+4. **Functional Mergesort**
     Extend your list ADT class from the previous exercise with a function for mergesort as discussed in the lecture. The function should be a new method in this class (or in a subclass).
 <br>
 
 
-1. **Stability of Sorting Algorithms** (optional)
+5. **Stability of Sorting Algorithms** (optional)
 
     Which of the sorting algorithms that you have studied are stable, which are not? Does this depend on any particular conditions of the implementation?
 <br>
 
-1. **Almost in-situ Mergesort** (optional)
+6. **Almost in-situ Mergesort** (optional)
 
     Your task  is to write a mergesort that runs _in-situ_. For this task, you should not start from the implementation you built on top of the list ADT class, but from the array-based implementation given in the online book. An attempt to perform in-situ mergesort in Python must start with removing the slicing operations from the function and instead passing index positions as parameters that identify the start and the end of the relevant part of the array, much like we did in the implementation of quicksort. In mergesort we call this "relevant part" a run. 
     
@@ -84,7 +84,7 @@ _Enjoy!_
     Implement an almost _in-situ_ Mergesort based on this approach.
 <br>
     
-1. **Empirical performance evaluation** (optional)
+7. **Empirical performance evaluation** (optional)
 
     Conduct an empirical perfromance evaluation and comparison for your almost _in-situ_ Mergesort and for the functional Mergesort implementation you constructed in the beginning of this week's prac. In other words, gather actual runtime data for a relevant range of problem sizes and draw a plot of the runtimes in dependence on problem size. To do this, you can use the Python Library **timeit** (Recall that we used this in the lecture to time the runtime examples at the beginning of the first lecture about O-Notation). At which conclusions do you arrive? 
    
